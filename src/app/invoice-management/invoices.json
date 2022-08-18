@@ -1,0 +1,19 @@
+{
+    "invoices":
+    [
+        {
+            "id": 2345,
+            "name": "Finances",
+            "value": 567000,
+            "currency": "USD",
+            "completed": true
+        },
+        {
+            "id": 6540,
+            "name": "Big Company",
+            "value": 345,
+            "currency": "HUF",
+            "completed": false
+        }
+    ]
+}

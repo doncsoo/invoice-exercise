@@ -1,0 +1,7 @@
+<div class='home'>
+    <h1 class="title">Welcome to the dashboard!</h1>
+    <div class='item' [class]="getBackground(comp)" [style.background-color]="getRandomPurpleColor(comp)" *ngFor="let comp of components" >
+        <a [routerLink]="comp.route" routerLinkActive="active">{{ comp.name }}</a>
+    </div>
+</div>
+

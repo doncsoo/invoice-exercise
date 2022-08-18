@@ -1,0 +1,32 @@
+<div class='invoices'>
+    <div class='list'>
+        <h1 class='title'>Invoices</h1>
+        <div class='entry' *ngFor="let invoice of invoices">
+            <label class='id'>{{ invoice.id }}</label>
+            <label class='name'>{{ invoice.name }}</label>
+            <label class='amount'>{{ invoice.value | currency: invoice.currency }}</label>
+            <span title="Status" [class]="invoice.completed ? 'completed' : 'pending' "></span>
+        </div>
+    </div>
+    <div class='form'>
+        <h1 class='title'>Add new item</h1>
+        <form (ngSubmit)="addInvoice(addForm)" #addForm="ngForm">
+            <label>Name</label>
+            <input required minlength="5" maxlength="25" name="name" id="name" type='text' [(ngModel)]="name">
+            <br>
+            <label>Value</label>
+            <input min="0" name="value" id="value" type='number' [(ngModel)]="value">
+            <br>
+            <label>Currency</label>
+            <select name="currency" id="currency" [(ngModel)]="currency">
+                <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+            </select>
+            <br>
+            <label>Status</label>
+            <input name="status" id="status" type="checkbox" [(ngModel)]="status">
+            <br>
+            <button [disabled]="!addForm.form.valid" type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</div>

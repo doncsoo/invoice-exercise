@@ -1,0 +1,32 @@
+.header {
+    width: 100vw;
+    max-height: 25vh;
+    position: relative;
+    background-image: linear-gradient(225deg, rgb(114, 0, 129) 0%, rgb(158, 20, 158) 30%, rgb(165, 46, 155) 60%, rgb(228, 3, 209) 100%);
+
+    .logo {
+        font-family: 'Manrope', sans-serif;
+        color: white;
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 30px;
+    }
+
+    .menu {
+        display: inline-block;
+    }
+
+    .menuitem {
+        font-family: 'Carrois Gothic SC', sans-serif;
+        color: white;
+        margin: 10px;
+        text-decoration: none;
+        padding: 10px;
+
+        &:hover {
+            opacity: 0.5;
+            border-left: 2px solid white;
+            transition: 0.1s ease-in;
+        }
+    }
+}

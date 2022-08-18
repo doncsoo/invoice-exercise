@@ -1,0 +1,115 @@
+.invoices {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100vw;
+}
+
+h4 {
+    display: inline-block;
+}
+
+.list {
+    border: 5px solid rgb(155, 0, 155);
+    border-radius: 25px;
+    padding: 10px;
+    display: inline-block;
+    height: 50vh;
+    width: 40vw;
+    overflow: auto;
+
+    margin: 50px;
+
+    .entry {
+
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        .id {
+            font-family: 'Carrois Gothic SC', sans-serif;
+            color: purple;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .name {
+            font-family: 'Manrope', sans-serif;
+            margin-right: 20px;
+            font-weight: italic;
+            font-size: large;
+        }
+
+        .amount {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            margin-right: 20px;
+        }
+
+        .completed {
+            background-image: url(../../assets/check-mark.svg);
+            background-size: 100% 100%;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+        
+        .pending {
+            background-image: url(../../assets/delete.svg);
+            background-size: 100% 100%;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+    }
+}
+
+.form {
+    display: inline-block;
+
+    border: 5px solid rgb(155, 0, 155);
+    border-radius: 25px;
+    padding: 10px;
+    display: inline-block;
+    height: 50vh;
+    width: 40vw;
+    overflow: auto;
+
+    margin: 50px;
+
+    label {
+        font-family: 'Manrope', sans-serif;
+        margin-right: 10px;
+    }
+
+    button {
+        font-family: 'Carrois Gothic SC', sans-serif;
+        font-size: large;
+        color: purple;
+        margin: 10px;
+        text-decoration: none;
+        padding: 10px;
+        background: none;
+        border: none;
+
+        &:hover {
+            opacity: 0.5;
+            border-left: 2px solid purple;
+            transition: 0.1s ease-in;
+        }
+
+        &:disabled {
+            color: grey;
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .list, .form {
+        display: block;
+    }
+}
+

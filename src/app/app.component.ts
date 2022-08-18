@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'abt-test';
+  components : any[] = [{name: 'Home', route: '/'},
+  {name: 'Invoice Management', route: '/invoice-management'}, 
+  {name: 'Accounting', route: '/accounting'}, 
+  {name: 'Manage Clients', route: '/clients'} ]
 }
